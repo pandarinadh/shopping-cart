@@ -1,0 +1,9 @@
+
+-- excution policy error
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser  
+
+
+
+ 
+ npm i --save animate.css bootstrap jquery popper.js vue-router
+
