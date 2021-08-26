@@ -7,3 +7,7 @@
  
  npm i --save animate.css bootstrap jquery popper.js vue-router
 
+ npm i --save @fortawesome/fontawesome-free @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/vue-fontawesome
+
+ npm install --save @popperjs/core
+
