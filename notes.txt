@@ -11,3 +11,8 @@
 
  npm install --save @popperjs/core
 
+  npm install --save @vue/composition-api
+
+
+   npm run lint -- --fix
+
