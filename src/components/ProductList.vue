@@ -1,5 +1,6 @@
 <template>
-
+  
+ <div>
   <transition-group
     name="fade"
     tag="div"
@@ -7,23 +8,23 @@
     @enter="enter"
     @leave="leave"
   >
-  {{ this.products}}
-    <div
-      class="row d-none mb-3 align-items-center"
-      v-for="(item, index) in this.products"
-      :key="item.id"
-      :data-index="index" >
-      <div class="col-1 m-auto"></div>
-      <button class="btn btn-info">+</button>
-    </div>
-    <div class="col">
-      <h3 class="text-info">{{ item.name }}</h3>
-      <p class="mb-0">{{ item.description }}</p>
-      <div class="h5 float-right">
-        <price :value="Number(item.price)"></price>
+
+   here in product list
+     <div  class="row mb-3 align-items-center"  v-for="(item, index) in this.products"   :key="index"  :data-index="index" >
+          <div class="col-1 m-auto"></div>
+          <button class="btn btn-info">+</button>
+         
+          <div class="col">
+            <h3 class="text-info">{{ item.name }}</h3>
+            <p class="mb-0">{{ item.description }}</p>
+            <div class="h5 float-right">
+              <Price :value="Number(item.price)"></Price>
+            </div>
+          </div>
       </div>
-    </div>
+   
   </transition-group>
+  </div>
 </template>
 
 <script>
@@ -35,7 +36,12 @@ export default ({
   components: { Price },
   
   props: ["products", "maximum"],
-  
+
+  data() {
+    return{
+    //  products:null
+    }
+  },
   methods: {
     beforeEnter: function (el) {
       el.className = "d-none";
@@ -53,5 +59,7 @@ export default ({
       }, delay);
     },
   },
+
+  
 });
 </script>

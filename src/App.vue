@@ -3,7 +3,8 @@
     <h1>My Shop</h1>
     <p class="animated fadeInRight">take a look at our</p>
     <font-awesome-icon icon="shopping-cart"></font-awesome-icon>
-    {{products}}
+    
+    <test :products="this.products" :maximum="this.maximum" ></test>
     <product-list :maximum="this.maximum" :products="this.products"></product-list>
   </div>
 </template>
@@ -13,10 +14,11 @@ import { Component, Vue } from "vue-property-decorator";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import ProductList from "./components/ProductList.vue";
 
+
 @Component({
   components: {
     FontAwesomeIcon,
-    ProductList,
+    ProductList
   },
 })
 export default class App extends Vue {
